@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>SteganoJS</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="panel-row">
+				<div class="panel">
+					<div>
+						<h1>Ukrywanie danych</h1>
+						<p>Wykonaj poszczególne kroki, a następnie pobierz zmodyfikowaną bitmapę.</p>
+						<a href="javascript:location.reload()">rozpocznij od nowa</a>
+					</div>
+					<div>
+						<h3>1. Wybierz plik, który chcesz ukryć.</h3>
+						<input type="file" id="fileInput" class="control" />
+					</div>
+					<div>
+						<h3>2. Zdecyduj, ile bitów każdej składowej poświęcisz na dane.</h3>
+						<select id="bitsInput" class="control">
+							<option>1</option>
+							<option>2</option>
+							<option>4</option>
+							<option>8</option>
+						</select>
+					</div>
+					<div>
+						<h3>3. Wybierz bitmapę służącą za kontener.</h3>
+						<input type="file" accept=".bmp" id="bitmapInput" class="control" />
+					</div>
+					<div id="output-write">
+						<h3>4. Pobierz zmodyfikowaną bitmapę.</h3>
+						<div id="write-links"></div>
+					</div>
+				</div>
+				
+				<div class="panel">
+					<div>
+						<h1>Podgląd</h1>
+					</div>
+					<div id="before">
+						<h3>Przed:</h3>
+						<img id="beforeImg" class="img" />
+					</div>
+					<div id="after">
+						<h3>Po:</h3>
+						<img id="afterImg" class="img" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="panel-row">
+				<div class="panel">
+					<div>
+						<h1>Odczyt danych</h1>
+						<p>Wykonaj poszczególne kroki, aby wydobyć ukryte dane z bitmapy.</p>
+					</div>
+					<div>
+						<h3>1. Wybierz plik z ukrytymi danymi.</h3>
+						<input type="file" id="readInput" />
+					</div>
+					<div id="output-read">
+						<h3>2. Pobierz ukryty plik.</h3>
+						<p>Uwaga - pobrany plik będzie miał rozszerzenie .bin, sam będziesz musiał ustalić jaki to format pliku.</p>
+						<div id="read-links"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="stegano.js"></script>
+</html>
